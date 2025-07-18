@@ -1,0 +1,82 @@
+### CREATE five documents.
+POST http://localhost:3000/expirations HTTP/1.1
+content-type: application/json
+
+{
+    "itemName": "apples",
+    "quantity": 27,
+    "date": "02/01/2000"
+}
+
+
+### CREATE 2
+POST http://localhost:3000/expirations HTTP/1.1
+content-type: application/json
+
+{
+    "itemName": "broccoli",
+    "quantity": 20,
+    "date": "03/22/2000"
+}
+
+### CREATE 3
+POST http://localhost:3000/expirations HTTP/1.1
+content-type: application/json
+
+{
+    "itemName": "barSoap",
+    "quantity": 8,
+    "date": "05/12/2004"
+}
+
+### CREATE 4
+POST http://localhost:3000/expirations HTTP/1.1
+content-type: application/json
+
+{
+    "itemName": "almonds",
+    "quantity": 6, 
+    "date": "02/04/2003"
+}
+
+### CREATE 5
+POST http://localhost:3000/expirations HTTP/1.1
+content-type: application/json
+
+{
+    "itemName": "bandAids",
+    "quantity": 30,
+    "date": "05/7/2004"
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/expirations HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/expirations/664f76ac993ce4bbb68b8c86 HTTP/1.1
+
+
+### UPDATE one document's quantity, by ID.
+### Replace the ID in the following request with one that exists
+### and update the quantity:
+PUT http://localhost:3000/expirations/664f76ac993ce4bbb68b8c86 HTTP/1.1
+content-type: application/json
+
+{
+    "itemName": "apples",
+    "quantity": 52,
+    "date": "04/01/2000"
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/expirations/664f76f0993ce4bbb68b8c8d HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/expirations HTTP/1.1
+

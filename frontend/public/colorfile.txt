@@ -1,0 +1,5 @@
+black #312819
+white #FEDFB3
+pink  #E8936C
+red   #A65C41
+gray  #816F57
